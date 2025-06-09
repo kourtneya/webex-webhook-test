@@ -7,8 +7,8 @@ app = Flask(__name__)
 logging.basicConfig(level=logging.INFO)
 
 # Get Webex access token and port from environment variables
-WEBEX_ACCESS_TOKEN = os.environ.get("WEBEX_ACCESS_TOKEN")
-PORT = int(os.environ.get("PORT", 5000))  # Default to 5000 if not set
+WEBEX_ACCESS_TOKEN = os.environ.get("WEBEX_ACCESS_TOKEN", "YOUR_WEBEX_TOKEN")
+PORT = int(os.environ.get("PORT", 8084))  # Default to 5000 if not set
 
 if not WEBEX_ACCESS_TOKEN:
     raise ValueError("WEBEX_ACCESS_TOKEN is not set in environment variables.")
